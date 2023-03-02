@@ -1,0 +1,11 @@
+{
+    "db":{
+        "database" : "SMS",
+        "username" : "postgres",
+        "password" : "mashal2401",
+        "logging" : false,
+        "host" : "localhost",
+        "dialect" : "postgres"       
+
+    }
+}
