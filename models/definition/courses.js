@@ -4,10 +4,10 @@ let sequelize = require("../../common/dbConnection");
 class courses extends Model{
 
 }
-User.init(
+courses.init(
     {
 
-    courseId :{
+    Id :{
         primaryKey : true,
         autoIncrement : true,
         allowNull : false,
@@ -23,6 +23,15 @@ User.init(
         allowNull : false,
         type : DataTypes.STRING(),
     },
+    courseLab:{
+        allowNull : true,
+        type : DataTypes.STRING(),
+    },
+    courseCode : {
+        allowNull : false,
+        type :  DataTypes.STRING(),
+
+    }
     
 
 },
@@ -33,4 +42,4 @@ User.init(
     modelName: "courses"
 },
 );
-module.exports= User;
+module.exports= courses;

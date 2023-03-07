@@ -1,32 +1,30 @@
 const { Sequelize, Model,DataTypes} = require("sequelize");
 let sequelize = require("../../common/dbConnection");
-class users extends Model{
+
+class students extends Model{
 
 }
-users.init(
+students.init(
     {
+
     id :{
         primaryKey : true,
         autoIncrement : true,
         allowNull : false,
-        type : DataTypes.INTEGER(),
+        type : DataTypes.INTEGER,
     },
-   Name:{
-        
-        allowNull : false,
-        type : DataTypes.STRING(),
-    },
-    email:{
-        unique : true,
-        allowNull : false,
-        type : DataTypes.STRING(),
-    },
-    phoneNumber:{
+    
+    rollNo:{
         unique : true,
         allowNull : false,
         type :  DataTypes.STRING(),
     },
-    password:{
+    semester:{
+        
+        allowNull : false,
+        type :  DataTypes.STRING(),
+    },
+    deptName:{
        
         allowNull : false,
         type :  DataTypes.STRING(),
@@ -37,7 +35,7 @@ users.init(
     timeStamps :true,
     paranoid : true,
     sequelize : sequelize,
-    modelName: "users"
+    modelName: "students"
 },
 );
-module.exports= users;
+module.exports= students;
